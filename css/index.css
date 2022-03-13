@@ -20,6 +20,8 @@
     --instagram-color: #F77737;
     --twitter-color: #1DA1F2;
     --facebook-color: #4267B3;
+    --vegetarian-color: #00c800;
+    --spicy-color: #c80000;
 
     /* Margins */
     --mg-1: 0.5rem;
@@ -37,7 +39,8 @@
     --extra-small-font: 0.8rem;
     --small-font: 0.9rem;
     --medium-font: 1.1rem;
-    --large-font: 2rem;
+    --large-font:1.5rem;
+    --x-large-font: 2rem;
 
     /* Border radius */
     --img-border-radius: 0.5rem;
@@ -369,7 +372,7 @@ header .nav-logo img {
 }
 
 .intro-title {
-    font-size: var(--large-font);
+    font-size: var(--x-large-font);
     color: var(--main-color);
     margin-bottom: var(--mg-2);
 }
@@ -539,16 +542,26 @@ header .nav-logo img {
     padding: 2rem 1rem;
 }
 
-.menu .menu-title {
+.menu-title {
     display: flex;
     justify-content: center;
-    margin-bottom: var(--mg-3);
+    margin-bottom: var(--mg-2);
+    font-size: var(--large-font);
+    text-transform: uppercase;
     color: var(--white-text-color);
     background-color: var(--backgroud-color);
     border-radius: var(--img-border-radius);
 }
 
-.menu .food-symbol {
+.menu-subtitle {
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--medium-font);
+    margin-bottom: var(--mg-3);
+}
+
+.food-symbol {
     font-size: var(--small-font);
     display: flex;
     justify-content: space-between;
@@ -560,21 +573,17 @@ header .nav-logo img {
 }
 
 .fa-seedling {
-    color: rgb(0, 200, 0);
+    color: var(--vegetarian-color);
 }
 
 .fa-pepper-hot {
-    color: rgb(200, 0, 0);
-}
-
-
-.featured-menu-items {
-    margin-top: var(--mg-4);
+    color: var(--spicy-color);
 }
 
 .featured-container {
     display: grid;
     row-gap: 4rem;
+    margin-top: var(--mg-4);
     grid-template-areas: 
         "item1"
         "item2"
@@ -614,6 +623,85 @@ header .nav-logo img {
 
 .available-options {
     margin-left: var(--mg-2);
+}
+
+.full-menu-container {
+    display: grid;
+    row-gap: var(--mg-3);
+    margin-top: var(--mg-4);
+    grid-template-areas: 
+        "title"
+        "appetizers"
+        "main"
+        "desserts"
+        "drinks";
+}
+
+.full-menu-title {
+    grid-area: title;
+    font-size: 1.3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.full-menu-title::after {
+    content: "";
+    display: block;
+    width: 5rem;
+    padding-top: 3px;
+    margin: 0 auto;
+    border-bottom: 2px solid var(--light-text-color);
+}
+
+.appetizers-container {
+    grid-area: appetizers;
+}
+
+.fab-title {
+    font-size: var(--medium-font);
+}
+
+.fab-content div {
+    margin-top: var(--mg-2);
+}
+
+.fab-item {
+    display: grid;
+    margin-top: var(--mg-4);
+    grid-template-areas: 
+        "title title title title price"
+        "description description description description description";
+}
+
+.item-title {
+    grid-area: title;
+    font-weight: bold;
+}
+
+.item-price {
+    grid-area: price;
+    text-align: right;
+}
+
+.item-description {
+    grid-area: description;
+    margin-top: var(--mg-1);
+    font-size: var(--small-font);
+}
+
+.main-container {
+    grid-area: main;
+    margin-top: var(--mg-3);
+}
+
+.desserts-container {
+    grid-area: desserts;
+    margin-top: var(--mg-3);
+}
+
+.drinks-container {
+    grid-area: drinks;
+    margin-top: var(--mg-3);
 }
 
 /* About */
