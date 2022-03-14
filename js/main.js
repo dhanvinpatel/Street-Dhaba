@@ -4,6 +4,7 @@ const listItem = document.querySelectorAll('.list-item');
 const modeToggle = document.getElementById('displaySetting');
 const body = document.getElementById('page');
 const scrollTopBtn = document.getElementById('scrollTop');
+const nav = document.getElementById('nav');
 
 // Toggle the menu button and list on button click
 navMenuBtn.addEventListener('click', () => {
@@ -35,10 +36,20 @@ modeToggle.addEventListener('click', () => {
 window.addEventListener('scroll', checkWindowHeight);
 
 function checkWindowHeight() {
+    // Toggles scroll to top btn
     if (window.scrollY > 250) {
         scrollTopBtn.style.display = "flex";
     } else {
         scrollTopBtn.style.display = "none";
+    }
+
+    // Switch the navigation background
+    if (window.scrollY > 50) {
+        nav.style.backgroundColor = "#FFFEFC";
+        nav.style.boxShadow = "0 2px 5px #b6b6b6";
+    } else {
+        nav.style.backgroundColor = "transparent";
+        nav.style.boxShadow = "none";
     }
 }
 
