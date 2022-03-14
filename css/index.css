@@ -80,6 +80,7 @@ header nav {
     width: 100%;
     z-index: 1;
     height: var(--header-height);
+    background-color: var(--body-color);
 }
 
 header .nav-logo {
@@ -138,10 +139,10 @@ header .nav-logo img {
     top: 6rem;
     left: 0;
     border-radius: 0 0 1rem 1rem;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 0.3);
     transform: translateY(-100vh);
     transition: transform 0.5s ease-in-out;
-    background-color: var(--main-color);
+    background-color: var(--body-color);
 }
 
 .show-menu-list {
@@ -361,7 +362,6 @@ header .nav-logo img {
     right: 1rem;
     cursor: pointer;
     color: var(--main-color);
-    transition: all 0.3s ease-in;
 }
 
 /* Home page */
@@ -612,6 +612,7 @@ header .nav-logo img {
 }
 
 .dish-name {
+    font-size: var(--medium-font);
     text-align: center;
     margin: var(--mg-2) 0;
 }
