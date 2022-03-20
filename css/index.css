@@ -20,8 +20,8 @@
     --instagram-color: #F77737;
     --twitter-color: #1DA1F2;
     --facebook-color: #4267B3;
-    --vegetarian-color: #00c800;
-    --spicy-color: #c80000;
+    --vegetarian-food-color: #00c800;
+    --spicy-food-color: #c80000;
 
     /* Margins */
     --mg-1: 0.5rem;
@@ -39,7 +39,7 @@
     --extra-small-font: 0.8rem;
     --small-font: 0.9rem;
     --medium-font: 1.1rem;
-    --large-font:1.5rem;
+    --large-font: 1.5rem;
     --x-large-font: 2rem;
 
     /* Border radius */
@@ -94,6 +94,7 @@ header .nav-logo img {
     height: 100%;
     object-fit: contain;
     overflow: hidden;
+    border-radius: var(--img-border-radius);
 }
 
 .display-setting i {
@@ -388,7 +389,7 @@ header .nav-logo img {
 .order-btn, .view-menu-btn {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+    border-radius: var(--img-border-radius);
     background-color: var(--main-color);
 }
 
@@ -573,11 +574,11 @@ header .nav-logo img {
 }
 
 .fa-seedling {
-    color: var(--vegetarian-color);
+    color: var(--vegetarian-food-color);
 }
 
 .fa-pepper-hot {
-    color: var(--spicy-color);
+    color: var(--spicy-food-color);
 }
 
 .featured-container {
@@ -659,7 +660,7 @@ header .nav-logo img {
 }
 
 .fab-title {
-    font-size: var(--medium-font);
+    font-size: 1.3rem;
 }
 
 .fab-content div {
@@ -707,35 +708,85 @@ header .nav-logo img {
 
 /* About */
 .about-container {
+    text-align: center;
     margin-top: var(--header-height);
     margin-bottom: 2rem;
     padding: 2rem 1rem;
-    background-color: #E6A64E;
-}
-
-.about {
-    margin-bottom: var(--mg-6);
 }
 
 .about-title {
-    margin-bottom: var(--mg-4);
+    font-size: var(--medium-font);
+    color: var(--main-color);
+    margin-bottom: var(--mg-1);
 }
 
 .about-subtitle {
+    font-size: var(--large-font);
     margin-bottom: var(--mg-4);
 }
 
-.history-btn {
-    text-align: center;
+.about-description {
+    color: var(--light-text-color);
+    margin-bottom: var(--mg-4);
 }
 
-.history-btn button {
-    padding: 1rem 1.5rem;
+.about-description em {
+    font-weight: bold;
+    color: var(--dark-text-color);
+}
+
+.history-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--img-border-radius);
+    background-color: var(--main-color);
 }
 
 .about-img img {
-    border-radius: 0.5rem;
-    margin-top: var(--mg-6);
+    border-radius: var(--img-border-radius);
+    margin: var(--mg-6) 0;
+}
+
+.services-container {
+    display: grid;
+    grid-template-areas: 
+        "title"
+        "sub-title"
+        "service-one"
+        "service-two"
+        "service-three";
+}
+
+.services-title {
+    grid-area: title;
+    font-size: var(--medium-font);
+    color: var(--main-color);
+}
+
+.services-subtitle {
+    grid-area: sub-title;
+    font-size: var(--large-font);
+    margin-bottom: var(--mg-4);
+}
+
+.service-one{
+    grid-area: service-one;
+}
+
+.service-two{
+    grid-area: service-two;
+}
+
+.service-three{
+    grid-area: service-three;
+}
+
+.service {
+    margin-bottom: 2rem;
+}
+
+.service:last-child {
+    margin-bottom: 0;
 }
 
 /* Location */
@@ -817,12 +868,94 @@ header .nav-logo img {
 /* Contact */
 .contact-container {
     margin-top: var(--header-height);
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     padding: 2rem 1rem;
     text-align: center;
-    background-color: #E6A64E;
 }
 
 .contact-title {
+    font-size: var(--medium-font);
+    color: var(--main-color);
+    margin-bottom: var(--mg-1);
+}
+
+.contact-subtitle {
+    font-size: var(--large-font);
     margin-bottom: var(--mg-4);
+}
+
+.contact-info, .contact-info a {
+    font-size: var(--small-font);
+    color: var(--light-text-color);
+}
+
+.contact-container > p {
+    margin-bottom: var(--mg-3);
+}
+
+.contact-form label{
+    position: absolute;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.contact-form input, .contact-form select {
+    height: 2.5rem;
+}
+
+.contact-form input {
+    padding-left: 0.5rem;
+    font-family: var(--default-font);
+}
+
+.contact-form textarea {
+    font-size: var(--medium-font);
+    font-family: var(--default-font);
+    padding: 1rem 0.5rem;
+}
+
+.contact-form input, .contact-form textarea, .contact-form select {
+    width: 100%;
+    border-radius: 0.3rem;
+    margin-bottom: 2rem;
+    border: 2px solid var(--dark-text-color);
+}
+
+.contact-form select {
+    background-color: var(--body-color);
+}
+
+.email-id input {
+    margin-bottom: 0;
+}
+
+.email-box {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.email-example {
+    display: none
+}
+
+.submit-btn {
+    display: block;
+    max-width: 12rem;
+    margin: 0 auto;
+    margin-bottom: 0;
+}
+
+.submit-btn input {
+    color: var(--white-text-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: var(--default-font);
+    margin-bottom: 0;
+    border: none;
+    background-color: var(--main-color);
 }
