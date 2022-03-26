@@ -136,9 +136,9 @@ header .nav-logo img {
     width: 100%;
     height: var(--menu-height);
     position: absolute;
-    align-items: center;
     top: 6rem;
     left: 0;
+    padding: 0 1rem;
     border-radius: 0 0 1rem 1rem;
     box-shadow: 0 5px 0px rgba(0, 0, 0, 0.3);
     transform: translateY(-100vh);
@@ -151,17 +151,25 @@ header .nav-logo img {
 }
 
 .menu-list .list-item {
+    display: grid;
+    grid-auto-flow: column;
+    align-self: center;
+    grid-template-columns: 1fr 1fr;
     font-family: var(--stylish-font);
-    font-size: 1.5rem;
     margin-bottom: 3.5rem;
+    padding: 0 2rem;
 }
 
 .list-item a {
+    font-size: var(--large-font);
     color: var(--dark-text-color);
 }
 
 .list-item i {
-    margin-right: var(--mg-2);
+    justify-self: end;
+    align-self: center;
+    margin-right: var(--mg-6);
+    font-size: var(--medium-font);
 }
 
 .list-item:last-child {
@@ -418,7 +426,7 @@ header .nav-logo img {
     margin-bottom: var(--mg-5);
 }
 
-.preview-content em {
+.restaurant-name {
     font-weight: bold;
     color: var(--dark-text-color);
 }
@@ -630,7 +638,7 @@ header .nav-logo img {
 .full-menu-container {
     display: grid;
     row-gap: var(--mg-3);
-    margin-top: var(--mg-4);
+    margin-top: var(--mg-6);
     grid-template-areas: 
         "title"
         "appetizers"
@@ -730,11 +738,6 @@ header .nav-logo img {
     margin-bottom: var(--mg-4);
 }
 
-.about-description em {
-    font-weight: bold;
-    color: var(--dark-text-color);
-}
-
 .history-btn {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -745,9 +748,10 @@ header .nav-logo img {
 .about-img img {
     border-radius: var(--img-border-radius);
     margin: var(--mg-6) 0;
+    display: block;
 }
 
-.services-container {
+.card-container {
     display: grid;
     grid-template-areas: 
         "title"
@@ -769,23 +773,64 @@ header .nav-logo img {
     margin-bottom: var(--mg-4);
 }
 
-.service-one{
+.service-one {
     grid-area: service-one;
 }
 
-.service-two{
+.service-one img {
+    background-color: var(--dark-text-color);
+}
+
+.service-two {
     grid-area: service-two;
 }
 
-.service-three{
+.service-three {
     grid-area: service-three;
 }
 
-.service {
-    margin-bottom: 2rem;
+.card {
+    background-color: var(--main-color);
+    margin-bottom: var(--mg-5);
+    border-radius: var(--img-border-radius);
 }
 
-.service:last-child {
+.card img {
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.service-content {
+    position: relative;
+    margin-bottom: var(--mg-4);
+}
+
+.service-name {
+    color: var(--light-text-color);
+    font-size: var(--medium-font);
+    font-weight: bold;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    width: 61%;
+    transform: translate(-50%, 50%);
+    padding: 0.8rem 2rem;
+    border-radius: 40px;
+    background-color: var(--white-text-color);
+}
+
+.service-description {
+    color: var(---dark-text-color);
+    padding: 4rem 1.5rem 2rem;
+    line-height: 2rem;
+}
+
+.service-btn span {
+    margin-left: var(--mg-1);
+    font-size: var(--large-font);
+}
+
+.card:last-child {
     margin-bottom: 0;
 }
 
