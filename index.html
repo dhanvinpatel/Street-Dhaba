@@ -5,28 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Link to Font Awesome CDN. -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
     <!-- Link to Google Font. -->
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&family=Redressed&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
     <!-- Link to favicon. -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-
     <!-- Link to CSS. -->
     <link rel="stylesheet" href="css/index.css">
-
+    <link rel="stylesheet" href="css/style.css">
     <!-- Link to JavaScript. -->
     <script src="js/main.js" defer></script>
-
     <title>Street Dhaba</title>
 </head>
 
@@ -34,7 +29,8 @@
     <header>
         <nav id="nav">
             <a href="index.html" class="nav-logo">
-                <img src="images/logo/street-dhaba-logo.jpeg" alt="Restaurant logo" title="Restaurant logo" onerror="this.onerror=null;this.src='images/restaurant/error.jpg'" width="100%">
+                <img src="images/logo/street-dhaba-logo.jpeg" alt="Restaurant logo" title="Restaurant logo"
+                    onerror="this.onerror=null;this.src='images/restaurant/error.jpg'" width="100%">
             </a>
             <div class="menu-toggle-btn" id="menuToggleBtn">
                 <div class="menu-btn-lines"></div>
@@ -51,7 +47,7 @@
                     <a href="menu.html" class="item-link">Menu</a>
                 </li>
                 <li class="list-item">
-                    <i class="fad fa-hotel"></i>
+                    <i class="fas fa-hotel"></i>
                     <a href="about.html" class="item-link">About</a>
                 </li>
                 <li class="list-item">
@@ -78,37 +74,41 @@
         <div class="intro-container" id="home">
             <div class="intro-content">
                 <h1 class="intro-title">Are you hungry?</h1>
-                <h2 class="intro-subtitle">Don't Wait!</h2>
-                <h2 class="intro-subtitle">Order tasty food now.</h2>
+                <h2 class="intro-subtitle">Don't Wait! <br>
+                    Order tasty food now.</h2>
                 <a href="order.html" class="order-btn">Order Now</a>
             </div>
-            <img class="intro-img" src="images/food/indian-thali.jpg"
-                alt="Thali - Indian meal served on round platter and bowls filled with variety of wholesome Indian dishes.">
-        </div>
-
-        <div class="preview-container">
-            <h3 class="preview-title">Check Our Menu</h3>
-            <p class="preview-content">If you are craving real, authentic Indian cuisine, look no further than
-                <em class="restaurant-name">Street Dhaba</em>.
-                <br>
-                We are famous for the spicy Indian dishes, professional chef and dedicated staff.
-            </p>
-            <div class="view-menu">
-                <a href="menu.html" class="view-menu-btn">View Menu</a>
+            <div>
+                <img class="intro-img" src="images/food/indian-thali.jpg"
+                    alt="Thali - Indian meal served on round platter and bowls filled with variety of wholesome Indian dishes.">
             </div>
         </div>
 
-        <div class="samples-container">
-            <img class="sample-img sample1" src="images/food/indian-pav-bhaji.jpg"
-                alt="Pav bhaji - a fast food dish from India.">
-            <img class="sample-img sample2" src="images/food/indian-samosa.jpg"
-                alt="Samosa - a fried or baked pastry with a savory filling.">
-            <img class="sample-img sample3" src="images//food/indian-pani-puri.jpg"
-                alt="Pani puri - a popular Indian street food.">
-            <img class="sample-img sample4" src="images/food/indian-rasmalai.jpg"
-                alt="Rasmalai - a popular Bengali sweet delicacy.">
-            <img class="sample-img sample5" src="images/food/indian-lassi.jpg"
-                alt="Lassi - a traditional yogurt drink.">
+        <div class="menu-preview">
+            <div class="preview-container">
+                <h3 class="preview-title">Check Our Menu</h3>
+                <p class="preview-content">If you are craving real, authentic Indian cuisine, look no further than
+                    <em class="restaurant-name">Street Dhaba</em>.
+                    <br>
+                    We are famous for the spicy Indian dishes, professional chef and dedicated staff.
+                </p>
+                <div class="view-menu">
+                    <a href="menu.html" class="view-menu-btn">View Menu</a>
+                </div>
+            </div>
+
+            <div class="samples-container">
+                <img class="sample-img sample1" src="images/food/indian-pav-bhaji.jpg"
+                    alt="Pav bhaji - a fast food dish from India.">
+                <img class="sample-img sample2" src="images/food/indian-samosa.jpg"
+                    alt="Samosa - a fried or baked pastry with a savory filling.">
+                <img class="sample-img sample3" src="images//food/indian-pani-puri.jpg"
+                    alt="Pani puri - a popular Indian street food.">
+                <img class="sample-img sample4" src="images/food/indian-rasmalai.jpg"
+                    alt="Rasmalai - a popular Bengali sweet delicacy.">
+                <img class="sample-img sample5" src="images/food/indian-lassi.jpg"
+                    alt="Lassi - a traditional yogurt drink.">
+            </div>
         </div>
 
         <div class="app-container">
@@ -134,21 +134,23 @@
     <footer>
         <div class="footer-container">
             <div class="logo-content">
-                <a href="index.html"><img src="images/logo/street-dhaba-logo-transparent.png" alt="Restaurant logo" title="Restaurant logo" onerror="this.onerror=null;this.src='images/restaurant/error.jpg'" width="100%"></a>
+                <a href="index.html"><img src="images/logo/street-dhaba-logo-transparent.png" alt="Restaurant logo"
+                        title="Restaurant logo" onerror="this.onerror=null;this.src='images/restaurant/error.jpg'"
+                        width="100%"></a>
             </div>
 
             <div class="media-content">
-                <div class="media-title">Join Our Social Community</div>
+                <div class="content-title">Join Our Social Community</div>
                 <div class="media-container">
-                    <a href="" class="footer-media"><i class="fab fa-youtube fa-lg"></i></a>
-                    <a href="" class="footer-media"><i class="fab fa-instagram fa-lg"></i></a>
-                    <a href="" class="footer-media"><i class="fab fa-twitter fa-lg"></i></a>
-                    <a href="" class="footer-media"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="https://www.youtube.com/" class="footer-media"><i class="fab fa-youtube fa-lg"></i></a>
+                    <a href="https://www.instagram.com/" class="footer-media"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="https://twitter.com/?lang=en" class="footer-media"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="https://www.facebook.com/" class="footer-media"><i class="fab fa-facebook-f fa-lg"></i></a>
                 </div>
             </div>
 
             <div class="hours-content">
-                <div class="hours-title">Hours of Operation</div>
+                <div class="content-title">Hours of Operation</div>
                 <div class="restaurant-hours">
                     <p class="hours"><span>Mon-Fri: </span>10 A.M. to 3 P.M. & <br> <span class="pm-hours">5 P.M. to 10
                             P.M</span>
@@ -158,12 +160,13 @@
             </div>
 
             <div class="address-content">
-                <div class="address-heading">Address</div>
-                <div class="address-subheading">Mumabi - Maharashtra</div>
+                <div class="content-title">Address</div>
                 <address>
-                    2203 Railway Road <br>
-                    Mumbai, MH 400001
-                    <br>
+                    <a href="https://goo.gl/maps/cEeQFNmg18cRetfm8" class="address">
+                        Mumbai - Maharashtra <br>
+                        2203 Railway Road <br>
+                        Mumbai, MH 400049 <br>
+                    </a>
                     <span>Tel: <a href="tel:+919812345560">+91 9812345560</a></span>
                     <br>
                     <span>Email: <a href="mailto:streetdhaba@gmail.com">streetdhaba@gmail.com</a></span>
@@ -171,11 +174,13 @@
             </div>
 
             <div class="restaurant-info-content">
-                <div class="info-title">Company</div>
-                <a href="#">Event</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="">Privacy Policy</a>
-                <a href="">Terms of Service</a>
+                <div class="content-title">Company</div>
+                <div class="restaurant-info-links">
+                    <a href="#">Event</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
 
             <p class="copyrights">&#169; 2022 Street Dhaba. All rights reserved.</p>
