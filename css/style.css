@@ -1,0 +1,353 @@
+@media (min-width: 769px) {
+
+    /* Header */
+    header .nav-logo {
+        margin-left: 5rem;
+    }
+
+    .menu-list {
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        position: static;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        transform: none;
+    }
+
+    .menu-list .list-item {
+        display: flex;
+        margin-bottom: 0;
+        padding: 0 1.5rem;
+        font-family: var(--default-font);
+    }
+
+    .list-item a {
+        white-space: nowrap;
+        font-size: var(--medium-font);
+    }
+
+    .list-item .fas {
+        display: none;
+    }
+
+    /* Nav menu button */
+    .menu-toggle-btn {
+        display: none;
+    }
+
+    /* Footer */
+    .footer-container {
+        column-gap: 2.5rem;
+        grid-template-rows: auto;
+        grid-template-columns: 2fr repeat(3, 1fr);
+        grid-template-areas:
+            "logo hours address information"
+            "media hours address information"
+            "copyrights copyrights copyrights copyrights";
+    }
+
+    .logo-content {
+        margin: -3rem 0;
+    }
+
+    .logo-content img {
+        width: 176px;
+    }
+
+    .media-content {
+        margin-left: var(--mg-5);
+    }
+
+    .restaurant-info-links a {
+        margin-bottom: 0;
+    }
+
+    /* Home page */
+    .home-page {
+        margin-bottom: 5rem;
+        padding: 2rem 5rem;
+    }
+
+    .intro-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .intro-title {
+        font-size: var(--xx-large-font);
+    }
+
+    .intro-img {
+        margin: 0;
+        margin-left: 1rem;
+        max-width: 500px;
+    }
+
+    .menu-preview {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row-reverse;
+        margin-top: 5rem;
+    }
+
+    .preview-container {
+        margin: auto 0;
+        padding: 0 5rem 0;
+    }
+
+    .preview-title {
+        font-size: var(--large-font);
+    }
+
+    .samples-container {
+        flex-basis: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 0;
+    }
+
+    .app-container {
+        margin-top: 5rem;
+    }
+
+    /* Menu */
+    .menu-container {
+        padding: 2rem 5rem;
+    }
+
+    .food-symbol {
+        margin-right: 33px;
+        justify-content: right;
+    }
+
+    .food-symbol span:first-child {
+        margin-right: var(--mg-3);
+    }
+
+    .featured-container {
+        column-gap: 4rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "item1 item2"
+            "item3 item4";
+    }
+
+    .item img {
+        height: 400px;
+    }
+
+    .full-menu-container {
+        column-gap: 10%;
+        grid-template-areas:
+            "title title"
+            "appetizers main"
+            "desserts drinks";
+    }
+
+    .main-container {
+        margin-top: 0;
+    }
+
+    .desserts-container {
+        margin-top: 0;
+    }
+
+    .drinks-container {
+        margin-top: 0;
+    }
+
+    /* About */
+    .about-container {
+        padding: 2rem 5rem;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom: 5rem;
+    }
+
+    .about-img img {
+        margin: 0 5rem 0 0;
+    }
+
+    .card-container {
+        column-gap: 2rem;
+        grid-template-areas:
+            "title title title"
+            "sub-title sub-title sub-title"
+            "service-one service-two service-three";
+    }
+
+    .services-title {
+        grid-area: title;
+        font-size: var(--medium-font);
+        color: var(--main-color);
+    }
+
+    .services-subtitle {
+        grid-area: sub-title;
+        font-size: var(--large-font);
+        margin-bottom: var(--mg-4);
+    }
+
+    .service-one {
+        grid-area: service-one;
+    }
+
+    .service-one img {
+        background-color: var(--dark-text-color);
+    }
+
+    .service-two {
+        grid-area: service-two;
+    }
+
+    .service-three {
+        grid-area: service-three;
+    }
+
+    .service-three img {
+        height: 356px;
+    }
+
+    .card {
+        background-color: var(--main-color);
+        margin-bottom: 0;
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 0.9rem;
+    }
+
+    .service-content {
+        position: relative;
+        margin-bottom: var(--mg-4);
+    }
+
+    .service-name {
+        color: var(--light-text-color);
+        font-size: var(--medium-font);
+        font-weight: bold;
+        position: absolute;
+        top: -55px;
+        left: 50%;
+        width: 61%;
+        transform: translate(-50%, 50%);
+        padding: 0.8rem 2rem;
+        border-radius: 40px;
+        background-color: var(--white-text-color);
+    }
+
+    .service-description {
+        color: var(---dark-text-color);
+        padding: 4rem 1.5rem 2rem;
+        line-height: 2rem;
+    }
+
+    .service-btn span {
+        margin-left: var(--mg-1);
+        font-size: var(--large-font);
+    }
+
+    /* Contact */
+    .contact-container {
+        margin-top: var(--header-height);
+        margin-bottom: 2rem;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .contact-title {
+        font-size: var(--medium-font);
+        color: var(--main-color);
+        margin-bottom: var(--mg-1);
+    }
+
+    .contact-subtitle {
+        font-size: var(--large-font);
+        margin-bottom: var(--mg-4);
+    }
+
+    .contact-info,
+    .contact-info a {
+        font-size: var(--small-font);
+        color: var(--light-text-color);
+    }
+
+    .contact-container>p {
+        margin-bottom: var(--mg-3);
+    }
+
+    .contact-form label {
+        position: absolute;
+        padding: 0;
+        width: 1px;
+        height: 1px;
+        border-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+    }
+
+    .contact-form input,
+    .contact-form select {
+        height: 2.5rem;
+    }
+
+    .contact-form input {
+        padding-left: 0.5rem;
+        font-family: var(--default-font);
+    }
+
+    .contact-form textarea {
+        font-size: var(--medium-font);
+        font-family: var(--default-font);
+        padding: 1rem 0.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        width: 590px;
+        border-radius: 0.3rem;
+        margin-bottom: 2rem;
+        border: 2px solid var(--dark-text-color);
+    }
+
+    .contact-form select {
+        background-color: var(--body-color);
+    }
+
+    .email-id input {
+        margin-bottom: 0;
+    }
+
+    .email-box {
+        text-align: center;
+    }
+
+    .email-example {
+        display: none
+    }
+
+    .submit-btn {
+        display: block;
+        max-width: 12rem;
+        margin: 0 auto;
+        margin-bottom: 0;
+    }
+
+    .submit-btn input {
+        color: var(--white-text-color);
+        font-weight: bold;
+        font-size: 1.3rem;
+        font-family: var(--default-font);
+        margin-bottom: 0;
+        border: none;
+        background-color: var(--main-color);
+    }
+}
