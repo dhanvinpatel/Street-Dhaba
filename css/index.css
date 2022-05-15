@@ -273,12 +273,8 @@ header .nav-logo img {
     grid-area: hours;
 }
 
-.restaurant-hours p span:first-child {
+.restaurant-hours div span:first-child {
     font-weight: bold;
-}
-
-.pm-hours {
-    padding-left: 4rem;
 }
 
 .address-content {
