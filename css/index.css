@@ -738,6 +738,7 @@ header .nav-logo img {
 
 .about-img img {
     display: block;
+    width: 100%;
     max-width: 500px;
     border-radius: var(--img-border-radius);
     margin: var(--mg-6) 0;
