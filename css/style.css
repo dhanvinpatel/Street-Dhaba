@@ -3,6 +3,11 @@
     /* Header */
     header .nav-logo {
         margin-left: 5rem;
+        transition: transform 1s;
+    }
+
+    .nav-logo:hover, .nav-logo:focus {
+        transform: rotate(360deg);
     }
 
     .menu-list {
@@ -26,6 +31,10 @@
     .list-item a {
         white-space: nowrap;
         font-size: var(--medium-font);
+    }
+
+    .list-item a:hover, .list-item a:focus {
+        color: var(--main-color);
     }
 
     .list-item .fas {
@@ -68,6 +77,16 @@
     .home-page {
         margin-bottom: 5rem;
         padding: 2rem 5rem;
+    }
+
+    @keyframes pulse {
+        from {
+            transform: scale(1);
+        }
+
+        to {
+            transform: scale(0.9);
+        }
     }
 
     .intro-container {
@@ -175,38 +194,9 @@
 
     .card-container {
         column-gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
-            "title title title"
-            "sub-title sub-title sub-title"
             "service-one service-two service-three";
-    }
-
-    .services-title {
-        grid-area: title;
-        font-size: var(--medium-font);
-        color: var(--main-color);
-    }
-
-    .services-subtitle {
-        grid-area: sub-title;
-        font-size: var(--large-font);
-        margin-bottom: var(--mg-4);
-    }
-
-    .service-one {
-        grid-area: service-one;
-    }
-
-    .service-one img {
-        background-color: var(--dark-text-color);
-    }
-
-    .service-two {
-        grid-area: service-two;
-    }
-
-    .service-three {
-        grid-area: service-three;
     }
 
     .service-three img {
@@ -218,28 +208,9 @@
         margin-bottom: 0;
     }
 
-    .card img {
-        width: 100%;
-        border-radius: 0.9rem;
-    }
-
     .service-content {
         position: relative;
         margin-bottom: var(--mg-4);
-    }
-
-    .service-name {
-        color: var(--light-text-color);
-        font-size: var(--medium-font);
-        font-weight: bold;
-        position: absolute;
-        top: -55px;
-        left: 50%;
-        width: 61%;
-        transform: translate(-50%, 50%);
-        padding: 0.8rem 2rem;
-        border-radius: 40px;
-        background-color: var(--white-text-color);
     }
 
     .service-description {
@@ -253,101 +224,74 @@
         font-size: var(--large-font);
     }
 
+    /* Location */
+    .location-container {
+        padding: 2rem 5rem;
+    }
+
+    .location-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: var(--mg-6);
+    }
+
+    .restaurant-address {
+        align-self: center;
+        padding: 6rem 5rem 0 2rem;
+        min-width: 300px;
+    }
+
+    .restaurant-times table {
+        width: 50%;
+        border-collapse: collapse;
+        margin-bottom: var(--mg-6);
+    }
+
+    .restaurant-times table td:last-child {
+        text-align: right;
+    }
+
+    .restaurant-times table tr {
+        border-bottom: 1px solid var(--dark-text-color);
+    }
+
+    .restaurant-map {
+        width: 100%;
+        height: 400px;
+    }
+
     /* Contact */
     .contact-container {
-        margin-top: var(--header-height);
-        margin-bottom: 2rem;
-        padding: 2rem 1rem;
-        text-align: center;
+        padding: 2rem 5rem;
     }
 
-    .contact-title {
-        font-size: var(--medium-font);
-        color: var(--main-color);
-        margin-bottom: var(--mg-1);
+    .submit-btn input:hover, .submit-btn input:focus {
+        background-color: #df8200;
+        color: var(--dark-text-color);
+        animation: pulse 1s;
     }
 
-    .contact-subtitle {
-        font-size: var(--large-font);
-        margin-bottom: var(--mg-4);
+    /* Button effects */
+    .order-btn:hover, .view-menu-btn:hover,
+    .history-btn:hover, .locate-btn:hover {
+        color: var(--dark-text-color);
+        animation: pulse 1s;
     }
 
-    .contact-info,
-    .contact-info a {
-        font-size: var(--small-font);
-        color: var(--light-text-color);
+    .order-btn:focus, .view-menu-btn:focus,
+    .history-btn:focus, .locate-btn:focus {
+        color: var(--dark-text-color);
+        animation: pulse 1s;
     }
+}
 
-    .contact-container>p {
-        margin-bottom: var(--mg-3);
-    }
+@media (min-width: 481px) and (max-width: 798px) {
 
-    .contact-form label {
-        position: absolute;
-        padding: 0;
-        width: 1px;
-        height: 1px;
-        border-width: 0;
-        white-space: nowrap;
-        overflow: hidden;
-        clip: rect(1px, 1px, 1px, 1px);
-    }
-
-    .contact-form input,
-    .contact-form select {
-        height: 2.5rem;
-    }
-
-    .contact-form input {
-        padding-left: 0.5rem;
-        font-family: var(--default-font);
-    }
-
-    .contact-form textarea {
-        font-size: var(--medium-font);
-        font-family: var(--default-font);
-        padding: 1rem 0.5rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form select {
-        width: 590px;
-        border-radius: 0.3rem;
-        margin-bottom: 2rem;
-        border: 2px solid var(--dark-text-color);
-    }
-
-    .contact-form select {
-        background-color: var(--body-color);
-    }
-
-    .email-id input {
-        margin-bottom: 0;
-    }
-
-    .email-box {
-        text-align: center;
-    }
-
-    .email-example {
-        display: none
-    }
-
-    .submit-btn {
-        display: block;
-        max-width: 12rem;
-        margin: 0 auto;
-        margin-bottom: 0;
-    }
-
-    .submit-btn input {
-        color: var(--white-text-color);
-        font-weight: bold;
-        font-size: 1.3rem;
-        font-family: var(--default-font);
-        margin-bottom: 0;
-        border: none;
-        background-color: var(--main-color);
+    /* About */
+    .card-container {
+        column-gap: 2rem;
+        grid-template-areas: 
+            "service-one service-one service-two service-two"
+            ". service-three service-three .";
     }
 }
